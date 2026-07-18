@@ -540,35 +540,7 @@ tailwind.config={theme:{extend:{
     </div>
   </section>
 
-  <!-- 16 · THE ASK -->
-  <section data-anim="ask">
-    <div class="eyebrow anim-up">Предложение</div>
-    <h2 class="text-[43px] mt-3 anim-up">Готовый AI-продукт — и доля в растущем рынке.</h2>
-    <p class="text-[16px] text-t2 mt-4 max-w-[940px] anim-up">У нас уже есть работающее демо — не идея на салфетке. Ищем партнёра, чтобы воткнуть реальный AI, данные и деньги и выйти на рынок.</p>
-    <div class="grid grid-cols-2 gap-6 mt-7 items-start">
-      <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
-        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-handshake text-ac"></i> Партнёру-турагенту</div>
-        <div class="mt-4 space-y-2.5">
-          <div class="feat"><i class="ph-fill ph-cube"></i> Готовый AI-продукт под ваш бренд — без затрат на разработку</div>
-          <div class="feat"><i class="ph-fill ph-calendar-heart"></i> Клиенты в приложении круглый год, не только в момент покупки</div>
-          <div class="feat"><i class="ph-fill ph-chart-line-up"></i> Доход с того, что вы уже продаёте + новые линии (eSIM, банкинг)</div>
-        </div>
-      </div>
-      <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
-        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-trend-up text-ac"></i> Инвестору</div>
-        <div class="mt-4 space-y-2.5">
-          <div class="feat"><i class="ph-fill ph-rocket-launch"></i> Вход в AI-travel — сегмент растёт на 27–29% в год</div>
-          <div class="feat"><i class="ph-fill ph-shield-star"></i> Уникальный wedge: компаньон + полный путь + деньги внутри</div>
-          <div class="feat"><i class="ph-fill ph-monitor-play"></i> Живое демо = исполнение, а не только слайды</div>
-        </div>
-      </div>
-    </div>
-    <div class="anim-up flex items-center gap-3 mt-6 chip chip-ac w-fit py-2.5 px-5 text-[14px] font-semibold">
-      <i class="ph-bold ph-git-merge"></i> Форматы на выбор: партнёрство под % · стратегическая инвестиция · продукт под бренд. Обсудим под вашу цель.
-    </div>
-  </section>
-
-  <!-- 17 · FINALE -->
+  <!-- 16 · FINALE -->
   <section data-anim="finale">
     <div class="eyebrow fl-eye">Куда летим дальше</div>
     <h1 class="text-[56px] font-bold mt-5 tracking-[-0.03em] max-w-[1020px]">
@@ -598,12 +570,12 @@ tailwind.config={theme:{extend:{
 <div class="footbar">
   <div class="fb-side">Хурма · 2026</div>
   <div class="fb-tag" id="fbTag"></div>
-  <div class="fb-side fb-num"><b id="fbNum">01</b> / 17</div>
+  <div class="fb-side fb-num"><b id="fbNum">01</b> / 16</div>
 </div>
 
 <div class="navbar">
   <button class="nbtn" id="prevBtn" aria-label="Назад"><i class="ph-bold ph-arrow-left"></i></button>
-  <div class="nmeta"><span class="mono"><b id="curNum">01</b>/<span id="totNum">17</span></span> · <b id="slLabel">Обложка</b></div>
+  <div class="nmeta"><span class="mono"><b id="curNum">01</b>/<span id="totNum">16</span></span> · <b id="slLabel">Обложка</b></div>
   <div class="dots" id="dots"></div>
   <button class="nbtn primary" id="nextBtn">Далее <i class="ph-bold ph-arrow-right"></i></button>
 </div>
@@ -617,8 +589,8 @@ tailwind.config={theme:{extend:{
 
 <script>
 (function(){
-  const LABELS=['Обложка','Проблема','Рынок','Инсайт','Решение','Экосистема','Планировщик','«Я заблудился»','Бесплатные места','Супер-апп','Флайвил','Сообщество','Почему сейчас','Конкуренты','Экономика','Предложение','Финал'];
-  const SECTIONS=['Обложка','Проблема','Рынок','Инсайт','Продукт','Экосистема','Планировщик','Флагман','Дифференциатор','Деньги','Флайвил','Сообщество','Момент','Конкуренты','Экономика','The Ask','Финал'];
+  const LABELS=['Обложка','Проблема','Рынок','Инсайт','Решение','Экосистема','Планировщик','«Я заблудился»','Бесплатные места','Супер-апп','Флайвил','Сообщество','Почему сейчас','Конкуренты','Экономика','Финал'];
+  const SECTIONS=['Обложка','Проблема','Рынок','Инсайт','Продукт','Экосистема','Планировщик','Флагман','Дифференциатор','Деньги','Флайвил','Сообщество','Момент','Конкуренты','Экономика','Финал'];
   const TAGLINES=[
     'Ты больше не один в путешествии.',
     'Собрать поездку — хаос. Быть в ней одному — страшно.',
@@ -635,7 +607,6 @@ tailwind.config={theme:{extend:{
     'Окно открыто — но компаньона не сделал никто.',
     'Фичи есть у всех. Связки и души — ни у кого.',
     'Зарабатываем на каждой поездке — и между ними.',
-    'Готовый продукт под бренд + доля в растущем рынке.',
     'Томас найдёт, оплатит и не бросит. Всё в одном коте.'
   ];
 
@@ -703,7 +674,6 @@ tailwind.config={theme:{extend:{
     whynow(s){ headsUp(s); },
     compete(s){ headsUp(s); },
     economics(s){ headsUp(s); },
-    ask(s){ headsUp(s); },
     finale(s){ const tl=gsap.timeline();
       tl.from(s.querySelector('.fl-eye'),{opacity:0,y:10,duration:.45,ease:'power2.out'})
         .from(s.querySelectorAll('.fl-line'),{yPercent:118,duration:.7,stagger:.1,ease:'power3.out'},'-=.1')

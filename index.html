@@ -42,7 +42,7 @@ tailwind.config={theme:{extend:{
 
  .reveal{font-family:'IBM Plex Sans',sans-serif;color:#322A24}
  .reveal .slides{text-align:left}
- .reveal .slides section{width:1280px;padding:78px 80px 84px;box-sizing:border-box;overflow:hidden;background:transparent}
+ .reveal .slides section{width:1280px;padding:70px 78px 80px;box-sizing:border-box;overflow:hidden;background:transparent}
  .reveal h1,.reveal h2,.reveal h3{font-family:'IBM Plex Sans',sans-serif;text-transform:none;letter-spacing:-.022em;margin:0;line-height:1.06;font-weight:700;color:#322A24}
  .reveal p{margin:0;line-height:1.5}
  .reveal .controls,.reveal .progress,.reveal .slide-number{display:none}
@@ -98,8 +98,11 @@ tailwind.config={theme:{extend:{
  .modchip{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#F3E9DE;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:7px;padding:6px 10px}
  .step{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:11px;padding:16px}
  .step .snum{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;color:#E7A57E}
+ .src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#9C9087;letter-spacing:.02em}
+ .stat{background:#fff;border:1px solid #E6DBCB;border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(50,42,36,.04),0 12px 34px -16px rgba(50,42,36,.16)}
+ .big{font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
 
- /* ===== Мобильная адаптация: reveal масштабирует слайд, но фикс-обвязка — нет. ===== */
+ /* ===== Мобильная адаптация ===== */
  @media (max-width: 900px), (max-height: 560px){
    .topbar{padding:8px 14px}
    .topbar .tb-left{font-size:11px;gap:6px}
@@ -142,26 +145,28 @@ tailwind.config={theme:{extend:{
   <!-- 01 · COVER -->
   <section data-anim="cover">
     <div class="eyebrow cv-eye">Хурма · AI-компаньон для путешествий</div>
-    <h1 class="text-[60px] font-bold mt-5 tracking-[-0.03em]">
+    <h1 class="text-[58px] font-bold mt-5 tracking-[-0.03em]">
       <span class="mask"><span class="cv-line">Кот, который соберёт поездку,</span></span>
       <span class="mask"><span class="cv-line">оплатит её и <span class="text-ac">не бросит</span> в пути.</span></span>
     </h1>
-    <p class="text-[19px] text-t2 mt-7 max-w-[840px] cv-sub">Не сайт по продаже туров, а живой компаньон — кот Томас. Подбирает поездку под человека,
-       оплачивает изнутри, летит вместе с ним и спасает в дороге. Travel + деньги + сообщество в одном супер-аппе.</p>
-    <div class="glowline w-[120px] mt-9 cv-glow"></div>
-    <div class="flex items-center gap-7 mt-9 cv-trust text-t3">
-      <div><div class="text-[24px] font-bold text-ink">План → Поездка → Спасение</div><div class="lbl mt-0.5">весь путь, а не только покупка</div></div>
+    <p class="text-[19px] text-t2 mt-6 max-w-[860px] cv-sub">Не сайт по продаже туров, а живой компаньон — кот Томас. Подбирает поездку под человека,
+       оплачивает изнутри, летит вместе с ним и спасает в дороге. <b class="text-ink">Travel + деньги + сообщество</b> в одном супер-аппе.</p>
+    <div class="glowline w-[120px] mt-8 cv-glow"></div>
+    <div class="flex items-center gap-7 mt-8 cv-trust text-t3">
+      <div><div class="text-[23px] font-bold text-ink">$11,6 трлн</div><div class="lbl mt-0.5">рынок путешествий · растёт</div></div>
       <div class="w-px h-10 bg-line"></div>
-      <div><div class="text-[24px] font-bold text-ink">Кот&nbsp;Томас</div><div class="lbl mt-0.5">характер = удержание</div></div>
+      <div><div class="text-[23px] font-bold text-ink">27–29%</div><div class="lbl mt-0.5">рост AI-в-travel в год</div></div>
+      <div class="w-px h-10 bg-line"></div>
+      <div><div class="text-[23px] font-bold text-ink">Кот&nbsp;Томас</div><div class="lbl mt-0.5">характер = удержание</div></div>
     </div>
   </section>
 
   <!-- 02 · PROBLEM -->
   <section data-anim="problem">
     <div class="eyebrow anim-up">Проблема</div>
-    <h2 class="text-[44px] mt-3 max-w-[1000px] anim-up">Собрать поездку — хаос. Быть в поездке одному — страшно.</h2>
+    <h2 class="text-[43px] mt-3 max-w-[1000px] anim-up">Собрать поездку — хаос. Быть в поездке одному — страшно.</h2>
     <p class="text-[16px] text-t2 mt-4 max-w-[880px] anim-up">Десятки вкладок и приложений на этапе сборки. А главный страх — потеряться там, в чужой стране, без языка и часто без интернета.</p>
-    <div class="grid grid-cols-4 gap-4 mt-9">
+    <div class="grid grid-cols-4 gap-4 mt-8">
       <div class="fragment fade-up bg-surf border border-line rounded-card p-6 card-sh">
         <i class="ph-duotone ph-squares-four text-warn text-[26px]"></i>
         <div class="text-[16px] font-semibold mt-3">30 приложений</div>
@@ -183,28 +188,58 @@ tailwind.config={theme:{extend:{
         <div class="text-[13px] text-t2 mt-1.5 leading-snug">карту морозят за границей, скрытые комиссии воспринимаются как обман</div>
       </div>
     </div>
-    <p class="text-[15px] text-t2 mt-8 max-w-[900px] anim-up">Рынок закрыл «как спланировать». Но никто не закрыл «как <b class="text-ink">спокойно прожить</b> поездку».</p>
+    <p class="text-[15px] text-t2 mt-7 max-w-[900px] anim-up">Рынок закрыл «как спланировать». Но никто не закрыл «как <b class="text-ink">спокойно прожить</b> поездку».</p>
   </section>
 
-  <!-- 03 · IDEA -->
+  <!-- 03 · MARKET -->
+  <section data-anim="market">
+    <div class="eyebrow anim-up">Рынок</div>
+    <h2 class="text-[43px] mt-3 anim-up">Огромный рынок — и он переходит на AI прямо сейчас.</h2>
+    <div class="grid grid-cols-3 gap-5 mt-8">
+      <div class="anim-up stat">
+        <div class="big text-[46px] text-ink">$<span data-count="11.6" data-dec="1">11.6</span> трлн</div>
+        <div class="text-[14.5px] text-t2 mt-2 font-medium">мировой рынок путешествий, 2025</div>
+        <div class="text-[12.5px] text-t3 mt-1">9,8% мирового ВВП · растёт +4,1% в год</div>
+        <div class="src mt-3">Источник: WTTC, 2025</div>
+      </div>
+      <div class="anim-up stat">
+        <div class="big text-[46px] text-ink">$<span data-count="715">715</span> млрд</div>
+        <div class="text-[14.5px] text-t2 mt-2 font-medium">онлайн-travel сегодня → ~$1,4 трлн к 2030-м</div>
+        <div class="text-[12.5px] text-t3 mt-1">рост 7–10% в год</div>
+        <div class="src mt-3">Global Market Insights · IMARC, 2025</div>
+      </div>
+      <div class="anim-up stat" style="border-color:#E6C9B4;background:linear-gradient(180deg,#FFF9F4,#fff)">
+        <div class="big text-[46px] text-ac">+<span data-count="28">28</span>% / год</div>
+        <div class="text-[14.5px] text-t2 mt-2 font-medium">AI-в-travel — самый быстрый сегмент</div>
+        <div class="text-[12.5px] text-t3 mt-1">$3 млрд (2024) → ~$14 млрд к 2030</div>
+        <div class="src mt-3">Grand View Research · MarketsandMarkets</div>
+      </div>
+    </div>
+    <div class="anim-up flex items-center gap-3 mt-6 chip chip-ac w-fit py-2.5 px-5 text-[14px] font-semibold">
+      <i class="ph-bold ph-trend-up"></i> 67% путешественников уже пользовались AI, 89% хотят на следующую поездку — это происходит уже сейчас.
+      <span class="src ml-1" style="color:#B98A72">Booking.com · опрос 37 325 чел, 2025</span>
+    </div>
+  </section>
+
+  <!-- 04 · IDEA -->
   <section data-anim="idea">
-    <div class="eyebrow id-eye">Идея</div>
-    <h1 class="text-[54px] font-bold mt-6 tracking-[-0.03em] max-w-[1040px] leading-[1.08]">
-      <span class="mask"><span class="id-line">А что если спутник не просто</span></span>
-      <span class="mask"><span class="id-line"><span class="text-ac">соберёт</span> тебе поездку —</span></span>
-      <span class="mask"><span class="id-line">а <span class="text-ac">полетит</span> вместе с тобой?</span></span>
+    <div class="eyebrow id-eye">Инсайт</div>
+    <h1 class="text-[52px] font-bold mt-6 tracking-[-0.03em] max-w-[1040px] leading-[1.08]">
+      <span class="mask"><span class="id-line">Все строят <span class="text-ac">подбор</span> поездки.</span></span>
+      <span class="mask"><span class="id-line">Никто не строит спутника,</span></span>
+      <span class="mask"><span class="id-line">который <span class="text-ac">летит с тобой</span>.</span></span>
     </h1>
-    <p class="text-[18px] text-t2 mt-8 max-w-[860px] id-sub">Не поисковик и не турагент. Персональный компаньон, который ведёт человека
-       от мечты дома — до возвращения. И рядом в самый страшный момент: когда ты один, потерялся и без сети.</p>
+    <p class="text-[18px] text-t2 mt-8 max-w-[880px] id-sub">Не поисковик и не турагент. Персональный компаньон, который ведёт человека
+       от мечты дома — до возвращения. И рядом в самый страшный момент: когда ты один, потерялся и без сети. Вот наш wedge.</p>
     <div class="glowline w-[120px] mt-9 id-glow"></div>
   </section>
 
-  <!-- 04 · SOLUTION -->
+  <!-- 05 · SOLUTION -->
   <section data-anim="solution">
     <div class="eyebrow anim-up">Решение · Хурма</div>
-    <h2 class="text-[44px] mt-3 anim-up">Живой AI-компаньон, а не ещё один поисковик.</h2>
+    <h2 class="text-[43px] mt-3 anim-up">Живой AI-компаньон, а не ещё один поисковик.</h2>
     <p class="text-[16px] text-t2 mt-4 max-w-[900px] anim-up">Кот Томас ведёт весь путь: <b class="text-ink">план → поездка → форс-мажор</b>. Не туроператор — экосистема-компаньон.</p>
-    <div class="grid grid-cols-3 gap-5 mt-9">
+    <div class="grid grid-cols-3 gap-5 mt-8">
       <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
         <i class="ph-duotone ph-cat text-ac text-[30px]"></i>
         <div class="text-[18px] font-semibold mt-3">Характер-компаньон</div>
@@ -221,25 +256,25 @@ tailwind.config={theme:{extend:{
         <p class="text-[13.5px] text-t2 mt-2 leading-snug">Что вокруг можно увидеть даром — то, что знают местные, а туристы нет. Такого нет ни у кого.</p>
       </div>
     </div>
-    <div class="anim-up chip chip-ac mt-7 w-fit py-2.5 px-5 text-[14px] font-semibold">Три кита ВМЕСТЕ — связки нет ни у одного конкурента.</div>
+    <div class="anim-up chip chip-ac mt-6 w-fit py-2.5 px-5 text-[14px] font-semibold">Три кита ВМЕСТЕ — связки нет ни у одного конкурента.</div>
   </section>
 
-  <!-- 05 · SURFACES / ECOSYSTEM -->
+  <!-- 06 · SURFACES / ECOSYSTEM -->
   <section data-anim="surfaces">
     <div class="eyebrow anim-up">Экосистема · две поверхности</div>
-    <h2 class="text-[44px] mt-3 anim-up">Планировщик собирает поездку. Спутник летит с тобой.</h2>
+    <h2 class="text-[43px] mt-3 anim-up">Планировщик собирает поездку. Спутник летит с тобой.</h2>
     <p class="text-[16px] text-t2 mt-4 max-w-[900px] anim-up">Две разные задачи, один и тот же кот Томас и один бренд. Сначала строим Планировщик (сайт), затем Спутник (приложение).</p>
-    <div class="relative mt-8" style="height:330px">
-      <svg viewBox="0 0 1120 330" class="absolute inset-0 w-full h-full" style="overflow:visible">
-        <path class="arch-link" d="M300 100 L560 208" fill="none" stroke="#D8B79E" stroke-width="2"/>
-        <path class="arch-link" d="M820 100 L560 208" fill="none" stroke="#D8B79E" stroke-width="2"/>
+    <div class="relative mt-7" style="height:320px">
+      <svg viewBox="0 0 1120 320" class="absolute inset-0 w-full h-full" style="overflow:visible">
+        <path class="arch-link" d="M300 98 L560 202" fill="none" stroke="#D8B79E" stroke-width="2"/>
+        <path class="arch-link" d="M820 98 L560 202" fill="none" stroke="#D8B79E" stroke-width="2"/>
       </svg>
-      <div class="anim-up archbox absolute" style="left:64px;top:22px;width:320px;padding:20px">
+      <div class="anim-up archbox absolute" style="left:64px;top:20px;width:320px;padding:20px">
         <div class="flex items-center gap-3"><span class="logo !w-9 !h-9"><i class="ph-fill ph-magic-wand text-white text-[16px]"></i></span>
           <div><div class="text-[17px] font-bold">🗺 Планировщик</div><div class="mono text-[11px] text-t3">сайт / кабинет</div></div></div>
         <p class="text-[12.5px] text-t2 mt-3 leading-snug">Диалог с Томасом собирает поездку: рейс, отель, активности, бесплатные места. Выбор «как на Booking», оплата в 1 клик.</p>
       </div>
-      <div class="anim-up archbox absolute" style="right:64px;top:22px;width:320px;padding:20px">
+      <div class="anim-up archbox absolute" style="right:64px;top:20px;width:320px;padding:20px">
         <div class="flex items-center gap-3"><span class="logo !w-9 !h-9" style="background:linear-gradient(135deg,#C4924E,#9E7233)"><i class="ph-fill ph-compass text-white text-[16px]"></i></span>
           <div><div class="text-[17px] font-bold">🧭 Спутник</div><div class="mono text-[11px] text-t3">приложение в поездке</div></div></div>
         <p class="text-[12.5px] text-t2 mt-3 leading-snug">Томас не исчезает после покупки — расписание, местное время, навигация, перевод, флагман «Я заблудился».</p>
@@ -254,46 +289,66 @@ tailwind.config={theme:{extend:{
     </div>
   </section>
 
-  <!-- 06 · PLANNER FLOW -->
+  <!-- 07 · PLANNER FLOW -->
   <section data-anim="planner">
     <div class="eyebrow anim-up">Планировщик · как это работает</div>
-    <h2 class="text-[44px] mt-3 anim-up">Не анкета — разговор. Томас понимает с полуслова.</h2>
-    <div class="grid grid-cols-5 gap-3 mt-9">
+    <h2 class="text-[43px] mt-3 anim-up">Не анкета — разговор. Томас понимает с полуслова.</h2>
+    <div class="grid grid-cols-5 gap-3 mt-8">
       <div class="anim-up bg-surf border border-line rounded-card p-5 card-sh">
-        <span class="pbadge">01</span>
-        <div class="text-[15px] font-semibold mt-3">Диалог</div>
+        <span class="pbadge">01</span><div class="text-[15px] font-semibold mt-3">Диалог</div>
         <p class="text-[12.5px] text-t2 mt-1.5 leading-snug">«Хочу к морю, вдвоём, в июне» — бюджет, даты, предпочтения</p>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-5 card-sh">
-        <span class="pbadge">02</span>
-        <div class="text-[15px] font-semibold mt-3">Подборка</div>
+        <span class="pbadge">02</span><div class="text-[15px] font-semibold mt-3">Подборка</div>
         <p class="text-[12.5px] text-t2 mt-1.5 leading-snug">Рейс + отель + активности + цена — собрано за секунды</p>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-5 card-sh">
-        <span class="pbadge">03</span>
-        <div class="text-[15px] font-semibold mt-3">Выбор вариантов</div>
+        <span class="pbadge">03</span><div class="text-[15px] font-semibold mt-3">Выбор вариантов</div>
         <p class="text-[12.5px] text-t2 mt-1.5 leading-snug">Раскрыл карточку — альтернативы и сортировка, как на Booking</p>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-5 card-sh">
-        <span class="pbadge">04</span>
-        <div class="text-[15px] font-semibold mt-3">«Что не так — поменяю»</div>
+        <span class="pbadge">04</span><div class="text-[15px] font-semibold mt-3">«Что не так — поменяю»</div>
         <p class="text-[12.5px] text-t2 mt-1.5 leading-snug">Пишешь словами — Томас меняет блок, цена пересчитывается</p>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-5 card-sh">
-        <span class="pbadge">05</span>
-        <div class="text-[15px] font-semibold mt-3">Оплата в 1 клик</div>
+        <span class="pbadge">05</span><div class="text-[15px] font-semibold mt-3">Оплата в 1 клик</div>
         <p class="text-[12.5px] text-t2 mt-1.5 leading-snug">Вся поездка со счёта; карта и eSIM — уже в кармане</p>
       </div>
     </div>
-    <p class="text-[15px] text-t2 mt-8 max-w-[920px] anim-up">Ощущение живого интеллекта: память диалога, обоснование выбора, эмоции Томаса, распознавание свободного ввода — «он реально меня понял».</p>
+    <p class="text-[15px] text-t2 mt-7 max-w-[940px] anim-up">Уже работает: живое интерактивное демо кабинета — под десктоп и мобильный. Это не макет, а исполнение.</p>
   </section>
 
-  <!-- 07 · FREE PLACES -->
+  <!-- 08 · LOST (flagship) -->
+  <section data-anim="lost">
+    <div class="eyebrow lo-eye" style="color:#E7A57E">Флагман-фича</div>
+    <h2 class="text-[43px] mt-3 anim-up">«Томас, я заблудился».</h2>
+    <p class="text-[16px] text-t2 mt-3 max-w-[920px] anim-up">Вечер, чужой город, ни одной знакомой вывески, <b class="text-ink">нет интернета</b>. Один диалог закрывает то, ради чего обычно открывают три приложения сразу.</p>
+    <div class="dk mt-6 p-7 lo-panel">
+      <div class="flex items-center justify-between">
+        <div class="dlbl">Один флоу вместо трёх приложений</div>
+        <div class="flex gap-2">
+          <span class="modchip"><i class="ph ph-map-trifold"></i> Карты</span>
+          <span class="modchip"><i class="ph ph-translate"></i> Переводчик</span>
+          <span class="modchip"><i class="ph ph-taxi"></i> Такси</span>
+          <span class="modchip" style="background:rgba(231,165,126,.16);border-color:rgba(231,165,126,.3);color:#F0C3A6"><i class="ph ph-wifi-slash"></i> Работает офлайн</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-4 gap-3 mt-5">
+        <div class="step"><div class="snum">ШАГ 01</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Где я</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">Офлайн-карта, пин «вы здесь»</p></div>
+        <div class="step"><div class="snum">ШАГ 02</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Как добраться</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">🚕 такси ~€8 / 🚌 автобус</p></div>
+        <div class="step"><div class="snum">ШАГ 03</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Перевод водителю</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">Фраза на местном — покажи экран</p></div>
+        <div class="step"><div class="snum">ШАГ 04</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Маршрут</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">Ведёт до отеля. Без паники.</p></div>
+      </div>
+    </div>
+    <p class="text-[14.5px] text-t2 mt-4 max-w-[980px] anim-up">Это <b class="text-ink">белое пятно рынка</b>: планировщики «умирают у двери аэропорта», даже лидеры держат сопровождение в поездке в статусе «скоро». Главный герой демо.</p>
+  </section>
+
+  <!-- 09 · FREE PLACES -->
   <section data-anim="freeplaces">
-    <div class="eyebrow anim-up">Killer-фича №1</div>
-    <h2 class="text-[44px] mt-3 anim-up">Бесплатные места рядом.</h2>
+    <div class="eyebrow anim-up">Дифференциатор</div>
+    <h2 class="text-[43px] mt-3 anim-up">Бесплатные места рядом.</h2>
     <p class="text-[16px] text-t2 mt-4 max-w-[900px] anim-up">Зная направление и район, Томас показывает, что вокруг можно увидеть <b class="text-ink">бесплатно или за копейки</b> — смотровые, дикие пляжи, ночные рынки, фри-туры. То, что знают местные, а туристы — нет.</p>
-    <div class="grid grid-cols-3 gap-5 mt-9">
+    <div class="grid grid-cols-3 gap-5 mt-8">
       <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
         <i class="ph-duotone ph-eye text-ac text-[28px]"></i>
         <div class="text-[17px] font-semibold mt-3">Компаньон, не продавец</div>
@@ -312,66 +367,77 @@ tailwind.config={theme:{extend:{
     </div>
   </section>
 
-  <!-- 08 · LOST (flagship, dark hero) -->
-  <section data-anim="lost">
-    <div class="eyebrow lo-eye" style="color:#E7A57E">Killer-фича №2 · флагман</div>
-    <h2 class="text-[44px] mt-3 anim-up">«Томас, я заблудился».</h2>
-    <p class="text-[16px] text-t2 mt-3 max-w-[920px] anim-up">Вечер, чужой город, ни одной знакомой вывески, <b class="text-ink">нет интернета</b>. Один диалог закрывает то, ради чего обычно открывают три приложения сразу.</p>
-    <div class="dk mt-7 p-7 lo-panel">
-      <div class="flex items-center justify-between">
-        <div class="dlbl">Один флоу вместо трёх приложений</div>
-        <div class="flex gap-2">
-          <span class="modchip"><i class="ph ph-map-trifold"></i> Карты</span>
-          <span class="modchip"><i class="ph ph-translate"></i> Переводчик</span>
-          <span class="modchip"><i class="ph ph-taxi"></i> Такси</span>
-          <span class="modchip" style="background:rgba(231,165,126,.16);border-color:rgba(231,165,126,.3);color:#F0C3A6"><i class="ph ph-wifi-slash"></i> Работает офлайн</span>
-        </div>
-      </div>
-      <div class="grid grid-cols-4 gap-3 mt-5">
-        <div class="step"><div class="snum">ШАГ 01</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Где я</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">Офлайн-карта, пин «вы здесь»</p></div>
-        <div class="step"><div class="snum">ШАГ 02</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Как добраться</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">🚕 такси ~€8 / 🚌 автобус</p></div>
-        <div class="step"><div class="snum">ШАГ 03</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Перевод водителю</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">Фраза на местном — покажи экран</p></div>
-        <div class="step"><div class="snum">ШАГ 04</div><div class="text-[15px] font-semibold mt-2" style="color:#fff">Маршрут</div><p class="text-[12px] mt-1.5 leading-snug" style="color:#C7B4A6">Ведёт до отеля. Без паники.</p></div>
-      </div>
-    </div>
-    <p class="text-[14.5px] text-t2 mt-5 max-w-[960px] anim-up">Это <b class="text-ink">белое пятно рынка</b>: планировщики «умирают у двери аэропорта», даже лидеры держат сопровождение в поездке в статусе «скоро». Главный герой демо.</p>
-  </section>
-
-  <!-- 09 · MONEY -->
+  <!-- 10 · MONEY -->
   <section data-anim="money">
-    <div class="eyebrow anim-up">Killer-фича №3 · супер-апп</div>
-    <h2 class="text-[44px] mt-3 anim-up">Деньги — внутри. Не турагент, а супер-апп.</h2>
-    <p class="text-[16px] text-t2 mt-4 max-w-[900px] anim-up">Деньги в поездке — боль №1. Хурма закрывает её изнутри, на рельсах платёжной инфраструктуры PayerPay.</p>
-    <div class="grid grid-cols-4 gap-4 mt-9">
+    <div class="eyebrow anim-up">Супер-апп</div>
+    <h2 class="text-[43px] mt-3 anim-up">Деньги — внутри. Не турагент, а супер-апп.</h2>
+    <p class="text-[16px] text-t2 mt-4 max-w-[920px] anim-up">Деньги в поездке — боль №1. Хурма закрывает её изнутри, на рельсах платёжной инфраструктуры PayerPay.</p>
+    <div class="grid grid-cols-4 gap-4 mt-8">
       <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh">
-        <i class="ph-duotone ph-wallet text-ac text-[26px]"></i>
-        <div class="text-[16px] font-semibold mt-3">Свой счёт</div>
+        <i class="ph-duotone ph-wallet text-ac text-[26px]"></i><div class="text-[16px] font-semibold mt-3">Свой счёт</div>
         <div class="text-[13px] text-t2 mt-1.5 leading-snug">мультивалютный EUR/USD/GBP + крипто</div>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh">
-        <i class="ph-duotone ph-credit-card text-ac text-[26px]"></i>
-        <div class="text-[16px] font-semibold mt-3">Карта Visa/MC</div>
+        <i class="ph-duotone ph-credit-card text-ac text-[26px]"></i><div class="text-[16px] font-semibold mt-3">Карта Visa/MC</div>
         <div class="text-[13px] text-t2 mt-1.5 leading-snug">платить по миру, без DCC и скрытых комиссий</div>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh">
-        <i class="ph-duotone ph-sim-card text-ac text-[26px]"></i>
-        <div class="text-[16px] font-semibold mt-3">eSIM внутри</div>
+        <i class="ph-duotone ph-sim-card text-ac text-[26px]"></i><div class="text-[16px] font-semibold mt-3">eSIM внутри</div>
         <div class="text-[13px] text-t2 mt-1.5 leading-snug">связь сразу по прилёту, ноль инвентаря</div>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh">
-        <i class="ph-duotone ph-users-three text-ac text-[26px]"></i>
-        <div class="text-[16px] font-semibold mt-3">Сплит путёвки</div>
+        <i class="ph-duotone ph-users-three text-ac text-[26px]"></i><div class="text-[16px] font-semibold mt-3">Сплит путёвки</div>
         <div class="text-[13px] text-t2 mt-1.5 leading-snug">как счёт в ресторане: у каждого спишется своя доля</div>
       </div>
     </div>
-    <p class="text-[15px] text-t2 mt-8 max-w-[920px] anim-up">Оплатить всю поездку, обменять валюту, остаться на связи — <b class="text-ink">в один клик, изнутри</b>. Момент, где становится ясно: это не турагент.</p>
+    <div class="anim-up dk mt-6 px-7 py-5 flex items-center gap-5">
+      <i class="ph-fill ph-chart-line-up text-[30px]" style="color:#E7A57E"></i>
+      <div class="text-[14.5px]" style="color:#E4D6C9">Travel-финтех — это <b style="color:#fff">реальные деньги</b>: Hopper заработал <b style="color:#fff">$850 млн</b> за 2024, и <b style="color:#fff">40%</b> его бронирований — на финтех-допах (attach 60%+).</div>
+      <div class="src ml-auto whitespace-nowrap" style="color:#B98A72">Business of Apps · Skift · McKinsey</div>
+    </div>
   </section>
 
-  <!-- 10 · COMMUNITY + THOMAS MOAT -->
+  <!-- 11 · FLYWHEEL (one more thing) -->
+  <section data-anim="flywheel">
+    <div class="eyebrow anim-up">Это ещё не всё · флайвил</div>
+    <h2 class="text-[43px] mt-3 anim-up">Вернулся домой — а Хурма остаётся с тобой.</h2>
+    <p class="text-[16px] text-t2 mt-3 max-w-[980px] anim-up">Банкинг Хурмы работает и в обычной жизни. Тратишь дома — копишь кешбэк — меняешь его на <b class="text-ink">мили и travel-перки</b>, которые оплачивают следующую поездку. Знакомая для США модель travel-rewards — но с котом Томасом.</p>
+    <div class="flex items-stretch gap-2.5 mt-7">
+      <div class="anim-up flex-1 bg-surf border border-line rounded-card p-5 card-sh">
+        <span class="pbadge">01</span><i class="ph-duotone ph-house-line text-ac text-[26px] mt-3 block"></i>
+        <div class="text-[15.5px] font-semibold mt-2">Тратишь каждый день</div>
+        <div class="text-[12.5px] text-t2 mt-1.5 leading-snug">Карта Хурмы работает дома, а не только в поездке</div>
+      </div>
+      <div class="anim-up flex items-center"><i class="ph-bold ph-arrow-right text-ac text-[22px]"></i></div>
+      <div class="anim-up flex-1 bg-surf border border-line rounded-card p-5 card-sh">
+        <span class="pbadge">02</span><i class="ph-duotone ph-coins text-ac text-[26px] mt-3 block"></i>
+        <div class="text-[15.5px] font-semibold mt-2">Копишь кешбэк</div>
+        <div class="text-[12.5px] text-t2 mt-1.5 leading-snug">С каждой обычной покупки — процент возвращается</div>
+      </div>
+      <div class="anim-up flex items-center"><i class="ph-bold ph-arrow-right text-ac text-[22px]"></i></div>
+      <div class="anim-up flex-1 bg-surf border border-line rounded-card p-5 card-sh">
+        <span class="pbadge">03</span><i class="ph-duotone ph-airplane-tilt text-ac text-[26px] mt-3 block"></i>
+        <div class="text-[15.5px] font-semibold mt-2">Меняешь на мили</div>
+        <div class="text-[12.5px] text-t2 mt-1.5 leading-snug">Кешбэк → мили и travel-перки: билеты, отели, скидки</div>
+      </div>
+      <div class="anim-up flex items-center"><i class="ph-bold ph-arrow-right text-ac text-[22px]"></i></div>
+      <div class="anim-up flex-1 bg-surf border border-line rounded-card p-5 card-sh">
+        <span class="pbadge">04</span><i class="ph-duotone ph-airplane-takeoff text-ac text-[26px] mt-3 block"></i>
+        <div class="text-[15.5px] font-semibold mt-2">Летишь дальше</div>
+        <div class="text-[12.5px] text-t2 mt-1.5 leading-snug">Мили оплачивают следующую поездку — и всё по кругу</div>
+      </div>
+    </div>
+    <div class="anim-up flex items-center gap-3 mt-6 chip chip-ac w-fit py-2.5 px-5 text-[13.5px] font-semibold">
+      <i class="ph-bold ph-arrows-clockwise"></i> Замкнутый круг = доход между поездками + удержание. В США потребители заработали $47,5 млрд кешбэка и миль за 2024.
+      <span class="src ml-1" style="color:#B98A72">CFPB, 2024</span>
+    </div>
+  </section>
+
+  <!-- 12 · COMMUNITY + MOAT -->
   <section data-anim="community">
     <div class="eyebrow anim-up">Удержание · наш moat</div>
-    <h2 class="text-[44px] mt-3 anim-up">Кот с характером + сообщество своих.</h2>
-    <div class="grid grid-cols-[1fr_1fr] gap-6 mt-9 items-start">
+    <h2 class="text-[43px] mt-3 anim-up">Кот с характером + сообщество своих.</h2>
+    <div class="grid grid-cols-[1fr_1fr] gap-6 mt-7 items-start">
       <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
         <div class="flex items-center gap-3"><i class="ph-fill ph-cat text-ac text-[26px]"></i><div class="text-[19px] font-bold">Томас — характер как продукт</div></div>
         <div class="mt-4 space-y-2.5">
@@ -379,7 +445,7 @@ tailwind.config={theme:{extend:{
           <div class="feat"><i class="ph-fill ph-flame"></i> Дневной ритуал-стрик, пуши его голосом</div>
           <div class="feat"><i class="ph-fill ph-clock-counter-clockwise"></i> Память между поездками — «куда дальше?»</div>
         </div>
-        <p class="text-[12.5px] text-t3 mt-4 leading-snug">Прецедент: Duolingo доказал — маскот с ежедневным ритуалом кратно поднимает удержание.</p>
+        <p class="text-[12.5px] text-t3 mt-4 leading-snug">Прецедент Duolingo: 7-дневный стрик → возврат на следующий день <b class="text-ink">×2,4</b>; DAU/MAU <b class="text-ink">41%</b> — втрое выше типичного приложения. <span class="src">Duolingo, SEC/блог</span></p>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
         <div class="flex items-center gap-3"><i class="ph-fill ph-chats-circle text-ac text-[26px]"></i><div class="text-[19px] font-bold">💬 Свои — рядом · Чаты</div></div>
@@ -393,88 +459,116 @@ tailwind.config={theme:{extend:{
     </div>
   </section>
 
-  <!-- 11 · MARKET -->
-  <section data-anim="market">
-    <div class="eyebrow anim-up">Рынок</div>
-    <h2 class="text-[44px] mt-3 anim-up">Фичи есть у всех. Связки + души — ни у кого.</h2>
-    <div class="grid grid-cols-[1fr_1fr] gap-6 mt-8 items-start">
+  <!-- 13 · WHY NOW -->
+  <section data-anim="whynow">
+    <div class="eyebrow anim-up">Почему именно сейчас</div>
+    <h2 class="text-[43px] mt-3 anim-up">Окно открыто — но компаньона не сделал никто.</h2>
+    <div class="grid grid-cols-2 gap-4 mt-7">
+      <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh flex gap-4">
+        <i class="ph-duotone ph-broadcast text-ac text-[28px]"></i>
+        <div><div class="text-[16px] font-semibold">Категория подтверждена</div>
+        <p class="text-[13px] text-t2 mt-1.5 leading-snug">Booking, Expedia, Trip.com, Kayak, Google выкатили AI-планировщики. Booking и Expedia — в первых партнёрах ChatGPT Apps (окт 2025). Но <b class="text-ink">компаньона нет ни у кого</b>.</p></div>
+      </div>
+      <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh flex gap-4">
+        <i class="ph-duotone ph-rocket-launch text-ac text-[28px]"></i>
+        <div><div class="text-[16px] font-semibold">Свежий единорог в AI-travel</div>
+        <p class="text-[13px] text-t2 mt-1.5 leading-snug">Fora подняла <b class="text-ink">$60 млн при оценке $1 млрд</b> (июль 2026). Деньги концентрируются в AI-native игроков. <span class="src">TechCrunch · Skift</span></p></div>
+      </div>
+      <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh flex gap-4">
+        <i class="ph-duotone ph-wallet text-ac text-[28px]"></i>
+        <div><div class="text-[16px] font-semibold">Наш тезис уже профинансирован</div>
+        <p class="text-[13px] text-t2 mt-1.5 leading-snug">Vuelo (Британия) — <b class="text-ink">€64 млн</b> под «AI-travel + встроенное финансирование» (март 2026). Ровно наша связка travel+деньги. <span class="src">EU-Startups · PhocusWire</span></p></div>
+      </div>
+      <div class="anim-up bg-surf border border-line rounded-card p-6 card-sh flex gap-4">
+        <i class="ph-duotone ph-handshake text-ac text-[28px]"></i>
+        <div><div class="text-[16px] font-semibold">Стратеги ставят лично</div>
+        <p class="text-[13px] text-t2 mt-1.5 leading-snug">Mindtrip бэкают <b class="text-ink">Amex Ventures, Capital One, United Airlines</b>. Деньги индустрии идут в AI-подбор. <span class="src">BusinessWire</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 · COMPETITION -->
+  <section data-anim="compete">
+    <div class="eyebrow anim-up">Конкуренты</div>
+    <h2 class="text-[43px] mt-3 anim-up">Фичи есть у всех. Связки + души — ни у кого.</h2>
+    <div class="grid grid-cols-[1fr_1fr] gap-6 mt-6 items-start">
       <div class="anim-up dk p-7">
         <div class="dlbl">Красный океан · планирование</div>
         <p class="text-[14px] mt-3 leading-snug" style="color:#D8C6B8">AI-подбор, чат, «замени вариант» — уже стандарт: Mindtrip, Layla, Booking AI, Expedia, Kayak, Google, ChatGPT. Гигантов на планировании не обгонишь.</p>
         <div class="flex flex-wrap gap-2 mt-5">
-          <span class="modchip">Mindtrip</span><span class="modchip">Layla</span><span class="modchip">Booking AI</span><span class="modchip">Kayak AI</span><span class="modchip">Expedia</span>
+          <span class="modchip">Mindtrip</span><span class="modchip">Layla</span><span class="modchip">Booking AI</span><span class="modchip">Kayak AI</span><span class="modchip">Expedia Romie</span>
         </div>
       </div>
       <div class="anim-up grid grid-cols-1 gap-4">
         <div class="bg-surf border border-line rounded-card p-6 card-sh">
           <div class="lbl text-acd flex items-center gap-2"><i class="ph-bold ph-check-circle"></i> Белый океан · наша связка</div>
-          <p class="text-[13.5px] text-t2 mt-2 leading-snug">Никто не собрал ВМЕСТЕ: <b class="text-ink">характер-компаньон + полный путь (план → живое сопровождение) + бесплатные жемчужины</b>. Плюс белое пятно — сопровождение в поездке (все бросают «у двери аэропорта»).</p>
+          <p class="text-[13.5px] text-t2 mt-2 leading-snug">Никто не собрал ВМЕСТЕ: <b class="text-ink">характер-компаньон + полный путь (план → живое сопровождение) + бесплатные жемчужины + деньги внутри</b>. Плюс белое пятно — сопровождение в поездке.</p>
         </div>
         <div class="chip chip-ac justify-center py-3 text-[13.5px] font-semibold">Ближайший соперник — Mindtrip: сильный продукт без характера. «Оденут в кота → клон».</div>
       </div>
     </div>
-    <p class="text-[14px] text-t3 mt-6 max-w-[960px] anim-up">Duolingo доказал: маскот = удержание. In-trip связку (навигация + перевод + бесплатные места + деньги) не собрал никто — это наше окно.</p>
+    <p class="text-[14px] text-t3 mt-5 max-w-[980px] anim-up">Капитал в travel-tech концентрируется в AI-native игроков — но ни один не сделал характерного компаньона на весь путь. Это защищаемое окно.</p>
   </section>
 
-  <!-- 12 · BUSINESS -->
-  <section data-anim="business">
-    <div class="eyebrow anim-up">Бизнес-модель</div>
-    <h2 class="text-[44px] mt-3 anim-up">Готовый AI-продукт под бренд партнёра.</h2>
-    <div class="grid grid-cols-2 gap-6 mt-9 items-start">
+  <!-- 15 · ECONOMICS -->
+  <section data-anim="economics">
+    <div class="eyebrow anim-up">Экономика</div>
+    <h2 class="text-[43px] mt-3 anim-up">Зарабатываем на каждой поездке — и между ними.</h2>
+    <div class="grid grid-cols-2 gap-6 mt-7 items-start">
       <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
-        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-coins text-ac"></i> Как зарабатываем</div>
+        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-airplane-tilt text-ac"></i> С каждой поездки</div>
         <div class="mt-4 space-y-2.5">
-          <div class="feat"><i class="ph-fill ph-percent"></i> Партнёрские % с билетов и отелей (Travelpayouts / Aviasales)</div>
+          <div class="feat"><i class="ph-fill ph-percent"></i> Комиссии с билетов и отелей (Travelpayouts / Aviasales)</div>
           <div class="feat"><i class="ph-fill ph-ticket"></i> Апселл платных экскурсий</div>
-          <div class="feat"><i class="ph-fill ph-sim-card"></i> eSIM (комиссия партнёра, ноль инвентаря)</div>
+          <div class="feat"><i class="ph-fill ph-sim-card"></i> eSIM — комиссия партнёра, ноль инвентаря</div>
           <div class="feat"><i class="ph-fill ph-crown-simple"></i> Подписка на «компаньона»</div>
         </div>
       </div>
       <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
-        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-handshake text-ac"></i> Зачем турагенту-партнёру</div>
+        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-arrows-clockwise text-ac"></i> Между поездками</div>
         <div class="mt-4 space-y-2.5">
-          <div class="feat"><i class="ph-fill ph-cube"></i> Готовый AI-продукт под его бренд — без затрат на разработку</div>
-          <div class="feat"><i class="ph-fill ph-calendar-heart"></i> Удержание: клиенты в приложении круглый год, не только в момент покупки</div>
-          <div class="feat"><i class="ph-fill ph-chart-line-up"></i> Доход с того, что уже продаёт: билеты / отели / экскурсии / eSIM</div>
-          <div class="feat"><i class="ph-fill ph-users-three"></i> Сообщество = органический поток лидов</div>
+          <div class="feat"><i class="ph-fill ph-credit-card"></i> Банкинг и карта работают в обычной жизни</div>
+          <div class="feat"><i class="ph-fill ph-coins"></i> Интерчейндж + кешбэк-петля (мили → следующая поездка)</div>
+          <div class="feat"><i class="ph-fill ph-repeat"></i> Возвратная выручка, а не разовая продажа тура</div>
+          <div class="feat"><i class="ph-fill ph-users-three"></i> Сообщество = органический приток без CAC</div>
         </div>
       </div>
     </div>
-    <p class="text-[15px] text-t2 mt-7 max-w-[940px] anim-up">Дифференциатор для партнёра: «турагент с живым AI-котом, который ведёт тебя всю поездку» — против «купил тур и пока».</p>
-  </section>
-
-  <!-- 13 · ROADMAP / STATUS -->
-  <section data-anim="roadmap">
-    <div class="eyebrow anim-up">Где мы сейчас · куда идём</div>
-    <h2 class="text-[44px] mt-3 anim-up">Сегодня — живое демо. Дальше — реальный продукт.</h2>
-    <div class="grid grid-cols-4 gap-4 mt-9">
-      <div class="anim-up phase">
-        <div class="flex items-center justify-between"><span class="pnum">СЕЙЧАС</span><span class="pbadge">готово</span></div>
-        <div class="text-[16px] font-bold mt-3">Живое демо</div>
-        <p class="text-[12.5px] text-t2 mt-2 leading-snug">Интерактивный кабинет Планировщика онлайн: диалог, подбор, выбор, оплата — под десктоп и мобилку.</p>
-      </div>
-      <div class="anim-up phase">
-        <div class="flex items-center justify-between"><span class="pnum">ФАЗА 1</span><span class="pbadge">Планировщик</span></div>
-        <div class="text-[16px] font-bold mt-3">Реальные данные + AI</div>
-        <p class="text-[12.5px] text-t2 mt-2 leading-snug">Реальный AI-оркестратор + живой инвентарь рейсов/отелей/мест + деньги (счёт/карта/eSIM).</p>
-      </div>
-      <div class="anim-up phase">
-        <div class="flex items-center justify-between"><span class="pnum">ФАЗА 2</span><span class="pbadge">Спутник</span></div>
-        <div class="text-[16px] font-bold mt-3">Приложение в поездке</div>
-        <p class="text-[12.5px] text-t2 mt-2 leading-snug">Нативный Спутник: офлайн-карты и перевод, расписание, флагман «Я заблудился».</p>
-      </div>
-      <div class="anim-up phase">
-        <div class="flex items-center justify-between"><span class="pnum">ФАЗА 3</span><span class="pbadge">экосистема</span></div>
-        <div class="text-[16px] font-bold mt-3">Сообщество + рост</div>
-        <p class="text-[12.5px] text-t2 mt-2 leading-snug">Чаты, сплит, гео-группа, лояльность Томаса — виральность и удержание.</p>
-      </div>
-    </div>
-    <div class="anim-up flex items-center gap-3 mt-7 chip chip-ac w-fit py-2.5 px-5 text-[13.5px] font-semibold">
-      <i class="ph-bold ph-plugs-connected"></i> Движок собран так, чтобы реальный AI и данные встали БЕЗ переписывания — «скрипт сегодня → AI завтра».
+    <div class="anim-up dk mt-6 px-7 py-5 flex items-center gap-6">
+      <div class="flex items-center gap-3"><i class="ph-fill ph-seal-check text-[26px]" style="color:#E7A57E"></i><div class="dlbl">Модель уже доказана рынком</div></div>
+      <div class="text-[14px]" style="color:#E4D6C9">Hopper: <b style="color:#fff">60%+</b> бронирований с финтех-допом, ~<b style="color:#fff">1,5</b> фин-продукта на клиента. Удержание маскотом (Duolingo): возврат <b style="color:#fff">×2,4</b>, DAU/MAU <b style="color:#fff">41%</b>.</div>
     </div>
   </section>
 
-  <!-- 14 · FINALE -->
+  <!-- 16 · THE ASK -->
+  <section data-anim="ask">
+    <div class="eyebrow anim-up">Предложение</div>
+    <h2 class="text-[43px] mt-3 anim-up">Готовый AI-продукт — и доля в растущем рынке.</h2>
+    <p class="text-[16px] text-t2 mt-4 max-w-[940px] anim-up">У нас уже есть работающее демо — не идея на салфетке. Ищем партнёра, чтобы воткнуть реальный AI, данные и деньги и выйти на рынок.</p>
+    <div class="grid grid-cols-2 gap-6 mt-7 items-start">
+      <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
+        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-handshake text-ac"></i> Партнёру-турагенту</div>
+        <div class="mt-4 space-y-2.5">
+          <div class="feat"><i class="ph-fill ph-cube"></i> Готовый AI-продукт под ваш бренд — без затрат на разработку</div>
+          <div class="feat"><i class="ph-fill ph-calendar-heart"></i> Клиенты в приложении круглый год, не только в момент покупки</div>
+          <div class="feat"><i class="ph-fill ph-chart-line-up"></i> Доход с того, что вы уже продаёте + новые линии (eSIM, банкинг)</div>
+        </div>
+      </div>
+      <div class="anim-up bg-surf border border-line rounded-card p-7 card-sh">
+        <div class="text-[18px] font-bold flex items-center gap-2"><i class="ph-fill ph-trend-up text-ac"></i> Инвестору</div>
+        <div class="mt-4 space-y-2.5">
+          <div class="feat"><i class="ph-fill ph-rocket-launch"></i> Вход в AI-travel — сегмент растёт на 27–29% в год</div>
+          <div class="feat"><i class="ph-fill ph-shield-star"></i> Уникальный wedge: компаньон + полный путь + деньги внутри</div>
+          <div class="feat"><i class="ph-fill ph-monitor-play"></i> Живое демо = исполнение, а не только слайды</div>
+        </div>
+      </div>
+    </div>
+    <div class="anim-up flex items-center gap-3 mt-6 chip chip-ac w-fit py-2.5 px-5 text-[14px] font-semibold">
+      <i class="ph-bold ph-git-merge"></i> Форматы на выбор: партнёрство под % · стратегическая инвестиция · продукт под бренд. Обсудим под вашу цель.
+    </div>
+  </section>
+
+  <!-- 17 · FINALE -->
   <section data-anim="finale">
     <div class="eyebrow fl-eye">Куда летим дальше</div>
     <h1 class="text-[56px] font-bold mt-5 tracking-[-0.03em] max-w-[1020px]">
@@ -483,14 +577,14 @@ tailwind.config={theme:{extend:{
     </h1>
     <p class="text-[19px] text-t2 mt-6 max-w-[860px]">Томас найдёт твою поездку, оплатит её, полетит с тобой и познакомит со своими — всё в одном коте.</p>
     <div class="glowline w-[120px] mt-8 fl-glow"></div>
-    <div class="flex items-center gap-8 mt-9 fl-stats text-t3">
-      <div><div class="text-[26px] font-bold text-ink">Планировщик + Спутник</div><div class="lbl mt-0.5">весь путь</div></div>
+    <div class="flex items-center gap-8 mt-8 fl-stats text-t3">
+      <div><div class="text-[24px] font-bold text-ink">$11,6 трлн рынок</div><div class="lbl mt-0.5">AI-сегмент +28%/год</div></div>
       <div class="w-px h-11 bg-line"></div>
-      <div><div class="text-[26px] font-bold text-ink">travel + деньги + сообщество</div><div class="lbl mt-0.5">один супер-апп</div></div>
+      <div><div class="text-[24px] font-bold text-ink">Полный путь + деньги</div><div class="lbl mt-0.5">один супер-апп с котом</div></div>
     </div>
-    <div class="flex items-center gap-3 mt-10 fl-logo">
+    <div class="flex items-center gap-3 mt-9 fl-logo">
       <span class="logo"><i class="ph-fill ph-cat text-white text-[19px]"></i></span>
-      <div><div class="font-bold text-[15px]">ХУРМА · кот Томас</div><div class="mono text-[11px] text-t3">AI-компаньон для путешествий</div></div>
+      <div><div class="font-bold text-[15px]">ХУРМА · кот Томас</div><div class="mono text-[11px] text-t3">AI-компаньон для путешествий · давайте обсудим</div></div>
     </div>
   </section>
 
@@ -504,12 +598,12 @@ tailwind.config={theme:{extend:{
 <div class="footbar">
   <div class="fb-side">Хурма · 2026</div>
   <div class="fb-tag" id="fbTag"></div>
-  <div class="fb-side fb-num"><b id="fbNum">01</b> / 14</div>
+  <div class="fb-side fb-num"><b id="fbNum">01</b> / 17</div>
 </div>
 
 <div class="navbar">
   <button class="nbtn" id="prevBtn" aria-label="Назад"><i class="ph-bold ph-arrow-left"></i></button>
-  <div class="nmeta"><span class="mono"><b id="curNum">01</b>/<span id="totNum">14</span></span> · <b id="slLabel">Обложка</b></div>
+  <div class="nmeta"><span class="mono"><b id="curNum">01</b>/<span id="totNum">17</span></span> · <b id="slLabel">Обложка</b></div>
   <div class="dots" id="dots"></div>
   <button class="nbtn primary" id="nextBtn">Далее <i class="ph-bold ph-arrow-right"></i></button>
 </div>
@@ -523,22 +617,25 @@ tailwind.config={theme:{extend:{
 
 <script>
 (function(){
-  const LABELS=['Обложка','Проблема','Идея','Решение','Экосистема','Планировщик','Бесплатные места','«Я заблудился»','Деньги','Сообщество','Рынок','Бизнес','Развитие','Финал'];
-  const SECTIONS=['Обложка','Проблема','Идея','Продукт','Экосистема','Планировщик','Фича','Флагман','Деньги','Сообщество','Рынок','Модель','Развитие','Финал'];
+  const LABELS=['Обложка','Проблема','Рынок','Инсайт','Решение','Экосистема','Планировщик','«Я заблудился»','Бесплатные места','Супер-апп','Флайвил','Сообщество','Почему сейчас','Конкуренты','Экономика','Предложение','Финал'];
+  const SECTIONS=['Обложка','Проблема','Рынок','Инсайт','Продукт','Экосистема','Планировщик','Флагман','Дифференциатор','Деньги','Флайвил','Сообщество','Момент','Конкуренты','Экономика','The Ask','Финал'];
   const TAGLINES=[
     'Ты больше не один в путешествии.',
     'Собрать поездку — хаос. Быть в ней одному — страшно.',
-    'А что если спутник не соберёт поездку — а полетит с тобой?',
+    'Огромный рынок — и он переходит на AI прямо сейчас.',
+    'Все строят подбор. Никто — спутника, который летит с тобой.',
     'Хурма — не туроператор, а живой AI-компаньон.',
     'Планировщик собирает поездку. Спутник летит с тобой.',
-    'Не анкета — разговор. Томас понимает с полуслова.',
-    'Бесплатные жемчужины рядом — то, чего нет в путеводителях.',
+    'Не анкета — разговор. И это уже живое демо.',
     'Чужой город, нет сети — Томас выведет. Один флоу вместо трёх приложений.',
-    'Оплатить, обменять, остаться на связи — изнутри, в один клик.',
+    'Бесплатные жемчужины рядом — то, чего нет в путеводителях.',
+    'Деньги — внутри. Travel-финтех = реальные деньги.',
+    'Вернулся домой — а Хурма остаётся с тобой. Кешбэк → мили → следующая поездка.',
     'Кот с характером + сообщество своих = удержание.',
+    'Окно открыто — но компаньона не сделал никто.',
     'Фичи есть у всех. Связки и души — ни у кого.',
-    'Готовый AI-продукт под бренд партнёра, с доходом с каждой поездки.',
-    'Сегодня — живое демо. Дальше — реальный продукт.',
+    'Зарабатываем на каждой поездке — и между ними.',
+    'Готовый продукт под бренд + доля в растущем рынке.',
     'Томас найдёт, оплатит и не бросит. Всё в одном коте.'
   ];
 
@@ -571,14 +668,14 @@ tailwind.config={theme:{extend:{
   document.getElementById('prevBtn').onclick=()=>Reveal.prev();
   document.getElementById('nextBtn').onclick=()=>Reveal.next();
 
-  function fmt(v,dec){ let s=dec?(+v).toFixed(dec):Math.round(v).toString(); const p=s.split('.'); p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,' '); return p.join('.'); }
+  function fmt(v,dec){ let s=dec?(+v).toFixed(dec):Math.round(v).toString(); const p=s.split('.'); p[0]=p[0].replace(/\B(?=(\d{3})+(?!\d))/g,' '); return p.join(dec?',':''); }
   function runCount(el){
     const t=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0), pre=el.dataset.pre||'', suf=el.dataset.suf||'';
     const o={v:0}; gsap.killTweensOf(o);
     gsap.to(o,{v:t,duration:1.1,ease:'power2.out',onUpdate:()=>{el.textContent=pre+fmt(o.v,dec)+suf;},onComplete:()=>{el.textContent=pre+fmt(t,dec)+suf;}});
   }
   function drawPath(p,dur,delay){ const len=p.getTotalLength(); if(!len) return; p.style.strokeDasharray=len; p.style.strokeDashoffset=len; gsap.to(p.style,{strokeDashoffset:0,duration:dur,delay:delay||0,ease:'power2.out'}); }
-  function headsUp(s){ const els=s.querySelectorAll('.anim-up'); if(els.length) gsap.from(els,{opacity:0,y:18,duration:.55,stagger:.06,ease:'power2.out'}); }
+  function headsUp(s){ const els=s.querySelectorAll('.anim-up'); if(els.length) gsap.from(els,{opacity:0,y:18,duration:.5,stagger:.05,ease:'power2.out',clearProps:'opacity,transform'}); }
 
   const ANIM={
     cover(s){ const tl=gsap.timeline();
@@ -588,22 +685,25 @@ tailwind.config={theme:{extend:{
         .fromTo(s.querySelector('.cv-glow'),{scaleX:0},{scaleX:1,duration:.6,ease:'power2.out'},'-=.25')
         .from(s.querySelector('.cv-trust'),{opacity:0,y:14,duration:.5},'-=.3'); },
     problem(s){ headsUp(s); },
+    market(s){ headsUp(s); s.querySelectorAll('[data-count]').forEach(runCount); },
     idea(s){ const tl=gsap.timeline();
       tl.from(s.querySelector('.id-eye'),{opacity:0,y:10,duration:.5,ease:'power2.out'})
-        .from(s.querySelectorAll('.id-line'),{yPercent:118,duration:.72,stagger:.11,ease:'power3.out'},'-=.1')
+        .from(s.querySelectorAll('.id-line'),{yPercent:118,duration:.72,stagger:.1,ease:'power3.out'},'-=.1')
         .from(s.querySelector('.id-sub'),{opacity:0,y:14,duration:.5},'-=.25')
         .fromTo(s.querySelector('.id-glow'),{scaleX:0},{scaleX:1,duration:.6,ease:'power2.out'},'-=.25'); },
     solution(s){ headsUp(s); },
     surfaces(s){ headsUp(s); s.querySelectorAll('.arch-link').forEach((p,i)=>drawPath(p,.7,.5+i*.15)); },
     planner(s){ headsUp(s); },
-    freeplaces(s){ headsUp(s); },
     lost(s){ headsUp(s); gsap.from(s.querySelector('.lo-panel'),{opacity:0,y:20,duration:.6,ease:'power2.out',delay:.15});
       gsap.from(s.querySelectorAll('.step'),{opacity:0,y:16,duration:.5,stagger:.08,ease:'power2.out',delay:.35}); },
+    freeplaces(s){ headsUp(s); },
     money(s){ headsUp(s); },
+    flywheel(s){ headsUp(s); },
     community(s){ headsUp(s); },
-    market(s){ headsUp(s); },
-    business(s){ headsUp(s); },
-    roadmap(s){ headsUp(s); },
+    whynow(s){ headsUp(s); },
+    compete(s){ headsUp(s); },
+    economics(s){ headsUp(s); },
+    ask(s){ headsUp(s); },
     finale(s){ const tl=gsap.timeline();
       tl.from(s.querySelector('.fl-eye'),{opacity:0,y:10,duration:.45,ease:'power2.out'})
         .from(s.querySelectorAll('.fl-line'),{yPercent:118,duration:.7,stagger:.1,ease:'power3.out'},'-=.1')
